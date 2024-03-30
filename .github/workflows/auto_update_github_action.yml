@@ -18,7 +18,7 @@ env:
 jobs:
   cgps:
     permissions:
-      contents: write
+      actions: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -69,4 +69,4 @@ jobs:
           PING_URL: ${{ secrets.PING_URL }}
 
       - name: Keep workflow alive
-        uses: gautamkrishnar/keepalive-workflow@v1
+        uses: gautamkrishnar/keepalive-workflow@v2

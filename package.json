@@ -5,6 +5,8 @@
     "download": "node download_lists.js",
     "download:allowlist": "node download_lists.js allowlist",
     "download:blocklist": "node download_lists.js blocklist",
+    "cloudflare-refresh": "npm run download && npm run cloudflare-create",
+    "cloudflare-refresh:blocklist": "npm run download:blocklist && npm run cloudflare-create",
     "cloudflare-create": "npm run cloudflare-create:list && npm run cloudflare-create:rule",
     "cloudflare-delete": "npm run cloudflare-delete:rule && npm run cloudflare-delete:list",
     "cloudflare-create:rule": "node cf_gateway_rule_create.js",
@@ -18,6 +20,6 @@
     "node-fetch": "3.3.2"
   },
   "engines": {
-    "node": "22.20.0"
+    "node": "22.21.1"
   }
 }

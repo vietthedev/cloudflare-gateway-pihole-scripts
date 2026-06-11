@@ -20,15 +20,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: "mrrfv/cloudflare-gateway-pihole-scripts"
           ref: "v1"
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version-file: ".node-version"
+          node-version: 'lts/*'
 
       - name: Install npm dependencies
         run: npm ci
